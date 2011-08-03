@@ -1,0 +1,648 @@
+{
+  "dependencies": {
+  },
+  "name": "mongodb",
+  "maintainer_email": "mattsolt@gmail.com",
+  "attributes": {
+    "mongodb/server/dbpath": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "/var/lib/mongodb",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB data store",
+      "description": "All MongoDB data will be stored here"
+    },
+    "mongodb/server/backup/maxemailsize": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "4000",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB backup max email size",
+      "description": "Set the maximum allowed email size in k. (4000 = approx 5MB email)"
+    },
+    "mongodb/server/backup/compression": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "bzip2",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB backup compression",
+      "description": "Choose Compression type. (gzip or bzip2)"
+    },
+    "mongodb/server/opidmem": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "0",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB replication opidmem",
+      "description": "Custom size limit for in-memory storage of op ids (in MB)"
+    },
+    "mongodb/server/oplogsize": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "0",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB replication oplogsize",
+      "description": "Custom size for replication operation log (in MB)"
+    },
+    "mongodb/server/nohttpinterface": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB nohttp",
+      "description": "Disable the HTTP interface (Defaults to localhost:27018)"
+    },
+    "mongodb/server/auth": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB authentication",
+      "description": "Turn on/off security"
+    },
+    "mongodb/server/dir": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "/opt/mongodb-1.8.2",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB installation path",
+      "description": "MongoDB will be installed here"
+    },
+    "mongodb/server/backup/mailaddress": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB backup mail",
+      "description": "Email Address to send mail to after each backup"
+    },
+    "mongodb/server/backup/backupdir": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "/var/backups/mongodb",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB backup directory",
+      "description": "Backup directory location"
+    },
+    "mongodb/server/nocursors": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB nocursors",
+      "description": "Diagnostic/debugging option"
+    },
+    "mongodb/server/quota": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB quota",
+      "description": "Enable db quota management"
+    },
+    "mongodb/server/objcheck": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB objcheck",
+      "description": "Inspect all client data for validity on receipt (useful for developing drivers)"
+    },
+    "mongodb/server/autoresync": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB replication autoresync",
+      "description": "Automatically resync if slave data is stale"
+    },
+    "mongodb/server/syncdelay": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "60",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB syncdelay",
+      "description": "Controls how often changes are flushed to disk"
+    },
+    "mongodb/server/rest": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB REST",
+      "description": "Enables REST interface for extra info on Http Interface"
+    },
+    "mongodb/server/nssize": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB nssize",
+      "description": "Specify .ns file size for new databases"
+    },
+    "mongodb/server/diaglog": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB operations loggins",
+      "description": "Set oplogging level where n is 0=off (default) 1=W 2=R 3=both 7=W+some reads"
+    },
+    "mongodb/server/password": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB password",
+      "description": "If authentication is on, you might want to specify this for the db backups"
+    },
+    "mongodb/i686/checksum": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "fc6bc63ba050bd372481ffe214731b00",
+      "type": "string",
+      "recipes": [
+        "mongodb::source"
+      ],
+      "display_name": "MongoDB 32bit source file checksum",
+      "description": "Will make sure the source file is the real deal"
+    },
+    "mongodb/server/mms_interval": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB mms-interval",
+      "description": "Ping interval for Mongo monitoring server"
+    },
+    "mongodb/server/noprealloc": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB noprealloc",
+      "description": "Disable data file preallocation"
+    },
+    "mongodb/server/logappend": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "true",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB logappend",
+      "description": "Whether the log file will be appended (TRUE) or over-written (FALSE)"
+    },
+    "mongodb/server/pidfile": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "/var/lib/mongodb/mongod.lock",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB PID file",
+      "description": "Path to MongoDB PID file"
+    },
+    "mongodb/source": {
+      "required": "optional",
+      "calculated": true,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+        "mongodb::source"
+      ],
+      "display_name": "MongoDB source file",
+      "description": "Downloaded location for MongoDB"
+    },
+    "mongodb/x86_64/checksum": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "5f4a33e00e1cc5940ae62ff83286e927",
+      "type": "string",
+      "recipes": [
+        "mongodb::source"
+      ],
+      "display_name": "MongoDB 64bit source file checksum",
+      "description": "Will make sure the source file is the real deal"
+    },
+    "mongodb/server/backup/mailcontent": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "stdout",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB backup mailcontent",
+      "description": "What would you like to be mailed to you?\n    - log   : send only log file\n    - files : send log file and sql files as attachments (see docs)\n    - stdout : will simply output the log to the screen if run manually\n    - quiet : Only send logs if an error occurs"
+    },
+    "mongodb/server/mms_name": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB mms-name",
+      "description": "Server name for Mongo monitoring server"
+    },
+    "mongodb/server/nohints": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB nohints",
+      "description": "Ignore query hints"
+    },
+    "mongodb/server/logpath": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "/var/log/mongodb.log",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB log file",
+      "description": "MongoDB will log into this file"
+    },
+    "mongodb/server/backup/latest": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "yes",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB backup latest",
+      "description": "Additionally keep a copy of the most recent backup in a seperate directory"
+    },
+    "mongodb/server/replication": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB replication",
+      "description": "Enable if you want to configure replication"
+    },
+    "mongodb/server/notablescan": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB notablescan",
+      "description": "Turns off table scans. Any query that would do a table scan fails."
+    },
+    "mongodb/server/noscripting": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB noscripting",
+      "description": "Turns off server-side scripting. This will result in greatly limited functionality."
+    },
+    "mongodb/server/cpu": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB CPU & I/O logging",
+      "description": "Enables periodic logging of CPU utilization and I/O wait"
+    },
+    "mongodb/version": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "1.8.2",
+      "type": "string",
+      "recipes": [
+        "mongodb::source"
+      ],
+      "display_name": "MongoDB source version",
+      "description": "Which MongoDB version will be installed from source"
+    },
+    "mongodb/server/backup/cleanup": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "yes",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB backup cleanup",
+      "description": "Choose if the uncompressed folder should be deleted after compression has completed"
+    },
+    "mongodb/server/mms": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB mms",
+      "description": "Enable when you have a Mongo monitoring server"
+    },
+    "mongodb/server/username": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB useranme",
+      "description": "If authentication is on, you might want to specify this for the db backups"
+    },
+    "mongodb/server/port": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "27017",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB port",
+      "description": "Accept connections on the specified port"
+    },
+    "mongodb/server/backup/day": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "6",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB backup day",
+      "description": "Which day do you want weekly backups? (1 to 7 where 1 is Monday)"
+    },
+    "mongodb/server/mms_token": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB mms-token",
+      "description": "Accout token for Mongo monitoring server"
+    },
+    "mongodb/server/verbose": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "false",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB verbose",
+      "description": "Verbose logging output"
+    },
+    "mongodb/server/config": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "/etc/mongodb.conf",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "MongoDB config",
+      "description": "Path to MongoDB config file"
+    }
+  },
+  "license": "Apache 2.0",
+  "suggestions": {
+  },
+  "platforms": {
+    "debian": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0"
+  },
+  "maintainer": "Matt Solt",
+  "long_description": "",
+  "version": "1.8.2",
+  "recommendations": {
+  },
+  "recipes": {
+    "mongodb::backup": "Sets up MongoDB backup script, taken from http://github.com/micahwedemeyer/automongobackup",
+    "mongodb": "Default recipe simply includes the mongodb::apt and mongodb::server recipes",
+    "mongodb::source": "Installs MongoDB from source and includes init.d script",
+    "mongodb::server": "Set up config and initialization to run mongod as a database server",
+    "mongodb::config_server": "Sets up config and initialization to run mongod as a config server for sharding",
+    "mongodb::mongos": "Sets up config and initialization to run mongos, the MongoDB sharding router",
+    "mongodb::apt": "Installs MongoDB from 10Gen's apt source and includes init.d script"
+  },
+  "groupings": {
+  },
+  "conflicting": {
+  },
+  "replacing": {
+  },
+  "description": "Installs and configures MongoDB 1.8.2",
+  "providing": {
+  }
+}
